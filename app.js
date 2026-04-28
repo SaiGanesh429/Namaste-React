@@ -1,13 +1,19 @@
-const subChild = [
-  React.createElement("h1", { id: "heading1" }, "Im H1 Tag"),
-  React.createElement("h1", { id: "heading2" }, "Im H2 Tag"),
-];
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const child = [
-  React.createElement("div", { id: "child1" }, subChild),
-  React.createElement("div", { id: "child2" }, subChild),
-];
 
-const parent = React.createElement("div", { id: "parent" }, child);
+
+const HomeComponent = () => {
+  return (
+    <div>
+      {jsxHeading} Home Component
+      {FunctionalComponentHeader()}11
+      <FunctionalComponentHeader />
+      <FunctionalComponentHeader></FunctionalComponentHeader>
+    </div>
+  );
+};
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<HomeComponent />);
